@@ -64,8 +64,8 @@ const SignUp = ({ navigation }) => {
 
             return true;
          }
-            setUserInformationAvailable(false);
-            setEditInformationButtonText(editingAvailable);
+         setUserInformationAvailable(false);
+         setEditInformationButtonText(editingAvailable);
          return false;
       }
       catch (error) {
@@ -108,7 +108,7 @@ const SignUp = ({ navigation }) => {
       RNFS.readFile(path, 'utf8').then(
 
          (content) => {
-            setShowScore(content+"/"+Object.keys(assessment[0]).length);
+            setShowScore(content + "/" + Object.keys(assessment[0]).length);
             return true;
          }
 
@@ -208,9 +208,9 @@ const SignUp = ({ navigation }) => {
 
                   onPress={
                      (isUserInformationAvailable) ? () => {
-                     setUserInformationAvailable(false);
-                     setEditInformationButtonText(editingAvailable);
-                  } :(validate())?()=>_storeData():null
+                        setUserInformationAvailable(false);
+                        setEditInformationButtonText(editingAvailable);
+                     } : (validate()) ? () => _storeData() : null
 
 
                   }
