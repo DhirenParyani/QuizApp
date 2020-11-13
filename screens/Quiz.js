@@ -59,7 +59,7 @@ const Quiz = ({ navigation }) => {
 
                var path = RNFS.DocumentDirectoryPath + '/score.txt';
 
-               RNFS.writeFile(path, correctAns, 'utf8').then((success) => {
+               RNFS.writeFile(path, correctAns, 'ascii').then((success) => {
 
                     navigation.goBack("SignUp");
                })
